@@ -13,7 +13,8 @@ export default function Contact() {
     lastname: "", 
     firstname: "",
     email:"", 
-    message: ""
+    message: "",
+    honeypot: "",
   });
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -26,6 +27,12 @@ export default function Contact() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    // si honeypot : bot donc on annule le submit
+    if( userInput.honeypot) {
+      console.log("Bot detecté !!");
+      return;
+    }
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
@@ -57,7 +64,8 @@ export default function Contact() {
           lastname: "" , 
           firstname: "",
           email:"", 
-          message: ""
+          message: "",
+          honeypot:"",
         })
       }
     } catch (error) {
@@ -74,6 +82,15 @@ export default function Contact() {
       <h1 className="text-2xl font-bold m-4 text-center">DEMANDE DE CONTACT</h1>
       <form className="flex flex-col items-center gap-4" onSubmit={handleSubmit}>
         <div className="flex flex-col sm:w-sm">
+          <input
+          type="text"
+          name="honeypot"
+          value={userInput.honeypot}
+          onChange={handleChange}
+          style={{ display: "none" }}
+          tabIndex={-1}
+          autoComplete="off"
+            />
           <label htmlFor="business">Entreprise</label>
           <input 
             ref={inputRef} 
@@ -94,7 +111,7 @@ export default function Contact() {
             name="lastname"
             value={userInput.lastname}
             onChange={handleChange}
-            // required
+            required
             />
         </div>
         <div className="flex flex-col sm:w-sm">
@@ -117,7 +134,7 @@ export default function Contact() {
             name="email"
             value={userInput.email}
             onChange={handleChange}
-            // required
+            required
             />
         </div>
         <div className="flex flex-col sm:w-sm">
@@ -128,7 +145,7 @@ export default function Contact() {
             id="message" 
             value={userInput.message}
             onChange={handleChange}
-            // required
+            required
             />
         </div>
         <button type="submit" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in w-30">Envoyer</button>
