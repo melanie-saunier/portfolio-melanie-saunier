@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Home() {
     const mainData = skillsData.filter((skill) => [4, 14, 5, 8].includes(skill.id));
   return (
-
+    
     <main className="md:m-8">
       <section className="my-8 flex flex-col items-center justify-center">
         <div className="w-64 h-64 overflow-hidden rounded-full">
