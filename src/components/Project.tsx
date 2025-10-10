@@ -19,6 +19,7 @@ export default function Project({title, description, stacks, variant, showStacks
         alt="profil"
         width={imageSize}
         height={imageSize}
+        priority
       />
       <p className="pt-4">
         {variant === "large" ? `${description}` : `${description.slice(0, 100)}...`}

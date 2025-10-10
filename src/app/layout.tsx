@@ -1,7 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
@@ -17,6 +15,7 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
+ 
       <body>
         <div className="bg-[url('/images/background.png')] bg-cover min-h-screen p-4">
             <nav className="text-base font-semibold flex flex-col items-center justify-center p-2">

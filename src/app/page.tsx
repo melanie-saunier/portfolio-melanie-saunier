@@ -4,9 +4,11 @@ import { projectsData } from "@/data/projects";
 import { skillsData } from "@/data/skills";
 import Image from "next/image";
 
+
 export default function Home() {
     const mainData = skillsData.filter((skill) => [4, 14, 5, 8].includes(skill.id));
   return (
+
     <main className="md:m-8">
       <section className="my-8 flex flex-col items-center justify-center">
         <div className="w-64 h-64 overflow-hidden rounded-full">
@@ -15,6 +17,7 @@ export default function Home() {
             alt="profil"
             width={500}
             height={500}
+            priority
           />
         </div>
         <h1 className="text-2xl font-bold m-4">MÉLANIE SAUNIER</h1>
