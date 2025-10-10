@@ -3,6 +3,7 @@ import Subtitle from "@/components/Subtitle";
 import { projectsData } from "@/data/projects";
 import { skillsData } from "@/data/skills";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -41,15 +42,15 @@ export default function Home() {
                 )})
               }
           </div>
-            <a href="/skills" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Et plus encore ...</a>
+            <Link href="/skills" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Et plus encore ...</Link>
 
         </div>
         <div className="bg-[var(--bg-box)] border_custom p-2 w-full flex flex-col items-center md:w-1/4 neon-hover transition-all duration-300">
           <Subtitle title="A PROPOS"/>
           <p className="text-justify"> Après 10 ans en tant que technicienne de laboratoire en
-            biologie médicale, j'ai souhaité donner un nouvel élan à ma
-            carrière. J'ai réalisé la formation Concepteur Développeur d'Applications de l'école O'clock, dans le but d'exercer le métier de développeuse web.</p>
-          <a href="/about" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">En savoir plus</a>
+            biologie médicale, j&apos;ai souhaité donner un nouvel élan à ma
+            carrière. J&apos;ai réalisé la formation Concepteur Développeur d&apos;Applications de l&apos;école O&apos;clock, dans le but d&apos;exercer le métier de développeuse web.</p>
+          <Link href="/about" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">En savoir plus</Link>
         </div>
         <div className="bg-[var(--bg-box)] border_custom w-full p-2 flex flex-col items-center md:w-2/4 neon-hover transition-all duration-300">
           <Subtitle title="LES DERNIERS PROJETS"/>
@@ -60,7 +61,7 @@ export default function Home() {
               )
             })}
           </div>
-          <a href="/projects" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in"> Tous les projets</a>
+          <Link href="/projects" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in"> Tous les projets</Link>
 
         </div>
       </section>

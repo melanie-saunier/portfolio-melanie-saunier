@@ -1,5 +1,5 @@
 import OneSkill from "@/components/OneSkill";
-import Subtitle from "@/components/Subtitle";
+
 
 export default function Skills() {
   return (

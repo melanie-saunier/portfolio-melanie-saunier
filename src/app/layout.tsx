@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import "./globals.css";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
@@ -27,11 +28,11 @@ export default function RootLayout({
                 className="border-solid border-2 mb-2 p-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in w-40 sm:hidden"
               >{isOpen?"Fermer" : "Menu"}</button>
               <div className={`${isOpen ? "flex flex-col items-center gap-2" : "hidden"} sm:flex sm:items-center sm:flex-row`}>
-                <a href="/" className="mx-2 p-2 hover:bg-[var(--main-text)] hover:rounded-full hover:text-[var(--bg-box)] duration-300 ease-in">Accueil</a>
-                <a href="/about" className="mx-2 p-2 hover:bg-[var(--main-text)] hover:rounded-full hover:text-[var(--bg-box)] duration-300 ease-in">A propos</a>
-                <a href="/projects" className="mx-2 p-2 hover:bg-[var(--main-text)] hover:rounded-full hover:text-[var(--bg-box)] duration-300 ease-in">Projets</a>
-                <a href="/skills" className="mx-2 p-2 hover:bg-[var(--main-text)] hover:rounded-full hover:text-[var(--bg-box)] duration-300 ease-in">Skills</a>
-                <a href="/contact" className="mx-2 border-solid border-2 p-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in" >Contact</a>
+                <Link href="/" className="mx-2 p-2 hover:bg-[var(--main-text)] hover:rounded-full hover:text-[var(--bg-box)] duration-300 ease-in">Accueil</Link>
+                <Link href="/about" className="mx-2 p-2 hover:bg-[var(--main-text)] hover:rounded-full hover:text-[var(--bg-box)] duration-300 ease-in">A propos</Link>
+                <Link href="/projects" className="mx-2 p-2 hover:bg-[var(--main-text)] hover:rounded-full hover:text-[var(--bg-box)] duration-300 ease-in">Projets</Link>
+                <Link href="/skills" className="mx-2 p-2 hover:bg-[var(--main-text)] hover:rounded-full hover:text-[var(--bg-box)] duration-300 ease-in">Skills</Link>
+                <Link href="/contact" className="mx-2 border-solid border-2 p-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in" >Contact</Link>
               </div>
             </nav>
             <ToastContainer />

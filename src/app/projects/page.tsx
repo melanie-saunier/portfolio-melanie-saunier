@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
 import Project from '@/components/Project';
 import { projectsData } from '@/data/projects';
+import Link from 'next/link';
 
 export default function ProjectsPage() {
   return(
@@ -37,7 +38,7 @@ export default function ProjectsPage() {
           
         </Swiper>
         </div>
-        <a href="/contact" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Contactez-moi pour plus d'informations</a>
+        <Link href="/contact" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Contactez-moi pour plus d&apos;informations</Link>
       </div>
     </main>
   );

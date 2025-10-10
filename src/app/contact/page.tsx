@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
-import { safeParse } from "zod";
 import { formSchema } from "@/schemas/formSchema.validation";
 
 export default function Contact() {
@@ -69,6 +68,7 @@ export default function Contact() {
         })
       }
     } catch (error) {
+      console.error(error)
       toast.error("Erreur lors de l'envoi de la demande. Merci de réessayer plus tard")
     }
   }

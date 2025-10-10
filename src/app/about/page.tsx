@@ -1,5 +1,6 @@
 "use-client"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -36,21 +37,21 @@ export default function About() {
             <h3 className="text-center font-bold">A PROPOS</h3>
             <p className="text-justify m-2">
               Après 10 ans en tant que technicienne de laboratoire en
-              biologie médicale, j'ai souhaité donner un nouvel élan à ma
+              biologie médicale, j&apos;ai souhaité donner un nouvel élan à ma
               carrière. Un bilan de compétences a confirmé mon besoin
-              d'exprimer mon côté logique, mon attirance pour la résolution
+              d&apos;exprimer mon côté logique, mon attirance pour la résolution
               de problèmes et le web.
             </p>
             <p className="text-justify m-2">
-              J'ai intégré la formation Concepteur Développeur d'Applications de l'école O'clock en mars 2025, dans le but de me former au métier de développeur web.
+              J&apos;ai intégré la formation Concepteur Développeur d&apos;Applications de l&apos;école O&apos;clock en mars 2025, dans le but de me former au métier de développeur web.
             </p>
             <p className="text-justify m-2">
-              Je suis actuellement à la recherche d'une entreprise dans laquelle je
+              Je suis actuellement à la recherche d&apos;une entreprise dans laquelle je
               pourrai exprimer mes compétences tout en continuant à
               progresser.
             </p>
         </div>
-        <a href="/contact" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Contactez-moi pour plus d'informations</a>
+        <Link href="/contact" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Contactez-moi pour plus d&apos;informations</Link>
       </div>
     </main>
   );
