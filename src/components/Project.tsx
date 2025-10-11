@@ -12,11 +12,11 @@ interface ProjectPropsInt {
 export default function Project({title, description, stacks, variant, showStacks} : ProjectPropsInt) {
   const imageSize = variant === "large" ? 500 : 200;
   return (
-    <div className="bg-[var(--backgroundsecond)] border_custom p-2 m-2 w-1/2 flex flex-col items-center neon-hover transition-all duration-300">
+    <div className="bg-[var(--backgroundsecond)] border_custom p-2 m-2 flex flex-col items-center neon-hover transition-all duration-300">
       <h4 className="font-bold pb-2">{title}</h4>
       <Image 
-        src={`/images/${title}.png`}
-        alt="profil"
+        src={`/images/${title.toLowerCase()}.png`}
+        alt={`${title}`}
         width={imageSize}
         height={imageSize}
         priority
@@ -36,7 +36,7 @@ export default function Project({title, description, stacks, variant, showStacks
                 <span className="px-2 border rounded-full m-2">{stack.name}</span>
                 {stack.logo && 
                   <Image 
-                    src={stack.logo}
+                    src={stack.logo.toLowerCase()}
                     alt={`logo de ${stack.name}`}
                     width={50}
                     height={50}

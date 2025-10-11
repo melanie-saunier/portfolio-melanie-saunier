@@ -17,14 +17,14 @@ export default function ProjectsPage() {
     <main className="md:mx-10">
       <div className="flex flex-col w-full items-center">
         <h1 className="text-2xl font-bold m-4">Mes projets</h1>
-        <div className="w-full flex justify-center">
+        <div className="w-full flex ">
           <Swiper
             modules={[Navigation, Pagination]}
             navigation
             pagination={{ clickable: true }}
             spaceBetween={20}
             slidesPerView={1}
-            className="w-full "
+            className="w-full"
           >
             {projectsData.map((project) => {
                 return (
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
           
         </Swiper>
         </div>
-        <Link href="/contact" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Contactez-moi pour plus d&apos;informations</Link>
+        <Link href="/contact" className="text-center border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Contactez-moi pour plus d&apos;informations</Link>
       </div>
     </main>
   );

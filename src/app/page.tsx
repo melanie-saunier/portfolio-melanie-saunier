@@ -12,22 +12,22 @@ export default function Home() {
     
     <main className="md:m-8">
       <section className="my-8 flex flex-col items-center justify-center">
-        <div className="w-64 h-64 overflow-hidden rounded-full">
-          <Image 
-            src="/images/profil.png"
-            alt="profil"
-            width={500}
-            height={500}
-            priority
-          />
-        </div>
-        <h1 className="text-2xl font-bold m-4">MÉLANIE SAUNIER</h1>
-        <h2 className="text-xl">Développeuse Web Fullstack</h2>
+          <div className="w-24 h-24 sm:w-64 sm:h-64 overflow-hidden rounded-full">
+            <Image 
+              className="w-full h-full object-cover"
+              src="/images/profil.png"
+              alt="profil"
+              width={500}
+              height={500}
+            />
+          </div>
+        <h1 className="text-center text-2xl font-bold m-4">MÉLANIE SAUNIER</h1>
+        <h2 className="text-center text-xl">Développeuse Web Fullstack</h2>
       </section>
       <section className="flex flex-wrap gap-4 items-start md:flex-nowrap">
         <div className="bg-[var(--bg-box)] border_custom p-2 flex flex-col items-center w-full md:w-1/4 neon-hover transition-all duration-300 ">
           <Subtitle title="SKILLS"/>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap justify-center">
               {mainData.map((skill) => {
                 return (
                   <div key={skill.id} className="flex flex-col items-center">
@@ -52,9 +52,9 @@ export default function Home() {
             carrière. J&apos;ai réalisé la formation Concepteur Développeur d&apos;Applications de l&apos;école O&apos;clock, dans le but d&apos;exercer le métier de développeuse web.</p>
           <Link href="/about" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">En savoir plus</Link>
         </div>
-        <div className="bg-[var(--bg-box)] border_custom w-full p-2 flex flex-col items-center md:w-2/4 neon-hover transition-all duration-300">
+        <div className="bg-[var(--bg-box)] border_custom p-2 flex flex-col items-center md:w-2/4 neon-hover transition-all duration-300">
           <Subtitle title="LES DERNIERS PROJETS"/>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap justify-center md:flex-nowrap">
             {projectsData.map((project) => {
               return (
                 <Project key={project.id} title={project.title} description={project.description} stacks={project.stack} variant={"small"} showStacks={false}/>

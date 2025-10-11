@@ -5,10 +5,11 @@ import Link from "next/link";
 export default function About() {
   return (
     <main>
-      <div className="flex flex-col items-center justify-center w-full max-w-5xl mx-auto">
+      <div className="flex flex-col items-center justify-center p-4 w-full max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between m-4 items-center w-full">
-          <div className="w-64 h-64 overflow-hidden rounded-full">
+          <div className="w-24 h-24 sm:w-64 sm:h-64 overflow-hidden rounded-full">
                   <Image 
+                    className="w-full h-full object-cover"
                     src="/images/profil.png"
                     alt="profil"
                     width={500}
@@ -20,7 +21,7 @@ export default function About() {
               <h1 className="text-2xl font-bold m-4 text-center">MÉLANIE SAUNIER</h1>
               <h2 className="text-xl pb-8 text-center">Développeuse Web Fullstack</h2>
           
-            <div className="bg-[var(--bg-box)] border_custom py-4 px-10 neon-hover transition-all duration-300">
+            <div className="bg-[var(--bg-box)] border_custom px-1 py-4 md:px-10 neon-hover transition-all duration-300">
               <h3 className="text-center font-bold">SOFTSKILLS</h3>
               <ul>
                 <li>- Adaptabilité</li>
@@ -33,7 +34,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="bg-[var(--bg-box)] border_custom m-4 py-4 px-10 w-4/5 neon-hover transition-all duration-300">
+        <div className="bg-[var(--bg-box)] border_custom  py-4 md:px-10  neon-hover transition-all duration-300">
             <h3 className="text-center font-bold">A PROPOS</h3>
             <p className="text-justify m-2">
               Après 10 ans en tant que technicienne de laboratoire en
@@ -51,7 +52,7 @@ export default function About() {
               progresser.
             </p>
         </div>
-        <Link href="/contact" className="border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Contactez-moi pour plus d&apos;informations</Link>
+        <Link href="/contact" className="text-center border-solid border-2 p-3 m-2 rounded-full hover:bg-[var(--main-text)] hover:text-[var(--bg-box)] duration-300 ease-in">Contactez-moi pour plus d&apos;informations</Link>
       </div>
     </main>
   );
